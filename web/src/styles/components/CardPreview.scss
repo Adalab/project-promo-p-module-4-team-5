@@ -1,0 +1,131 @@
+@import '../core/Variables.scss';
+@import '../core/Mixins.scss';
+
+.preview-section {
+  padding: 38px 0 40px 0;
+  background-color: $sand;
+  @include tablet() {
+    // width: 80vw;
+    // OJOCUIDAO !!!
+    width: 74vw;
+    height: 105vh;
+    // width: 68vw;
+    // height: 100vh;
+    padding: 173px 0 260px 0;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @include desktop() {
+    // width: 80vw;
+    width: 100%;
+
+    padding: 173px 0 260px 0;
+  }
+}
+
+.preview-box {
+  padding: 0 19%;
+  &__container {
+    border: solid 1px $darkbrown;
+    width: 75px;
+    height: 30px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &--img {
+      width: 20px;
+      color: $darkbrown;
+    }
+    &--button {
+      background-color: transparent;
+      border: none;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-family: $font-main;
+      color: $darkbrown;
+      padding-top: 20px;
+      padding-left: 8px;
+    }
+  }
+  &__containerphoto {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    box-shadow: 0 1px 10px 0 $black-20, 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+    background-color: var(--white-two);
+    @include tablet() {
+      width: fit-content;
+    }
+    @include desktop() {
+      width: fit-content;
+    }
+    &--img {
+      margin: 10px 0;
+      width: 240px;
+      height: 200px;
+      //background: url('../../images/imagen-chica.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}
+
+.containercard {
+  width: 240px;
+  height: 329px;
+  border-radius: 2px;
+  box-shadow: 0 1px 10px 0 $black-20, 0 1px 3px 0 $black-shadow;
+  background-color: $white-two;
+  &__box {
+    display: flex;
+    padding-top: 21px;
+  }
+
+  .rectangle {
+    width: 5px;
+    height: 42px;
+  }
+  .container-tex {
+    &__title {
+      font-family: $font-third;
+      font-size: 18px;
+      padding-left: 20px;
+    }
+    &__paragraph {
+      font-family: $font-third;
+      font-size: 16px;
+      color: $gunmetal;
+      padding-left: 20px;
+    }
+  }
+}
+
+.preview-list {
+  list-style: none;
+  margin-left: 20px;
+  display: flex;
+
+  &__item {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    &--link {
+      text-decoration: none;
+    }
+  }
+}

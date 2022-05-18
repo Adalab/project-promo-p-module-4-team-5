@@ -1,0 +1,56 @@
+@import '../core/Variables.scss';
+@import '../core/Mixins.scss';
+
+.fieldset.collapsed .fieldset__container {
+  display: none;
+}
+
+.fieldset:not(.collapsed) .fieldset__arrow {
+  transform: rotate(540deg);
+}
+
+.palette3 {
+  .outline {
+    background-color: $faded-orange;
+  }
+  .name {
+    color: $slate;
+  }
+  .icon {
+    border: solid 2px $light-grey-blue;
+
+    .link {
+      color: $slate;
+    }
+  }
+}
+.palette2 {
+  .outline {
+    background-color: $rusty-red;
+  }
+  .name {
+    color: $dried-blood;
+  }
+  .icon {
+    border: solid 2px $tomato;
+
+    .link {
+      color: $dried-blood;
+    }
+  }
+}
+.palette1 {
+  .outline {
+    background-color: $dirty-blue;
+  }
+  .name {
+    color: $dark-green-blue;
+  }
+  .icon {
+    border: solid 2px $hospital-green;
+
+    .link {
+      color: $dark-green-blue;
+    }
+  }
+}

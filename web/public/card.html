@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Almendra"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
+      integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <title>Awesome profile-cards</title>
+  </head>
+
+  <body>
+    <!-- header -->
+    <header class="header">
+      <img
+        class="header__img"
+        src="./assets/images/boolean logo.png"
+        alt="Logo imagenes"
+        title="Logo imagenes"
+      />
+    </header>
+
+    <section class="box-preview">
+      <section class="preview-section">
+        <div class="preview-box">
+          <section class="preview-box__container js__reset">
+            <i class="fa-solid fa-trash-can preview-box__container--img"></i>
+            <button class="preview-box__container--button">reset</button>
+          </section>
+
+          <section class="preview-box__containerphoto">
+            <section class="containercard palette3 js-palette">
+              <article class="containercard__box">
+                <div class="rectangle outline"></div>
+                <div class="container-tex">
+                  <h2 class="container-tex__title js__card__name name">
+                    Nombre apellido
+                  </h2>
+                  <p class="container-tex__paragraph js__card__job">
+                    Front-end developer
+                  </p>
+                </div>
+              </article>
+              <div class="preview-box__containerphoto--img js__profile-image"></div>
+              <ul class="preview-list">
+                <li class="preview-list__item icon">
+                  <a class="preview-list__item--link" href=""
+                    ><i class="fa-solid fa-mobile-screen-button link"></i
+                  ></a>
+                </li>
+                <li class="preview-list__item icon">
+                  <a class="preview-list__item--link" href=""
+                    ><i class="fa-regular fa-envelope link"></i
+                  ></a>
+                </li>
+                <li class="preview-list__item icon">
+                  <a class="preview-list__item--link" href=""
+                    ><i class="fa-brands fa-linkedin-in link"></i
+                  ></a>
+                </li>
+                <li class="preview-list__item icon">
+                  <a class="preview-list__item--link" href=""
+                    ><i class="fa-brands fa-github-alt link"></i
+                  ></a>
+                </li>
+              </ul>
+            </section>
+          </section>
+        </div>
+      </section>
+
+      <section class="section-form">
+        <form action="" class="js_form">
+          <fieldset class="fieldset collapsed js-form-fieldset fieldset-colours">
+            <section class="design js-form-title">
+              <div class="design__box">
+                <!--class="window-title"-->
+                <a href="http://">
+                  <i class="fa-solid fa-object-ungroup window design__box--window"></i
+                ></a>
+
+                <legend class="design__box--title">Diseña</legend>
+                <!--class="design-title"-->
+              </div>
+
+              <i class="fieldset__arrow fa-solid fa-chevron-down design__box--arrow"></i>
+            </section>
+
+            <section class="fieldset__container colour-section">
+              <h3 class="colours-title">colores</h3>
+
+              <section class="palette-section">
+                <div class="form-inputs input__label">
+                  <input
+                    name="input"
+                    type="radio"
+                    class="inputs js-inputColor1"
+                    checked
+                  />
+                  <label for="colors"></label>
+                  <input name="input" type="radio" class="inputs js-inputColor2" />
+                  <label for="colors"></label>
+
+                  <input name="input" type="radio" class="inputs js-inputColor3" />
+                  <label for="colors"></label>
+                </div>
+
+                <section class="colours-list">
+                  <ul class="list-1">
+                    <li class="colour-1a js-color-1a"></li>
+                    <li class="colour-1b js-color-1b"></li>
+                    <li class="colour-1c js-color-1c"></li>
+                  </ul>
+
+                  <ul class="list-3">
+                    <li class="colour-2a js-color-2a"></li>
+                    <li class="colour-2b js-color-2b"></li>
+                    <li class="colour-2c js-color-2c"></li>
+                  </ul>
+
+                  <ul class="list-3">
+                    <li class="colour-3a js-color-3a"></li>
+                    <li class="colour-3b js-color-3b"></li>
+                    <li class="colour-3c js-color-3c"></li>
+                  </ul>
+                </section>
+              </section>
+            </section>
+          </fieldset>
+
+          <fieldset class="fieldset collapsed js-form-fieldset fill__fieldset">
+            <div class="fill__title js-form-title">
+              <i class="fa-solid fa-keyboard fill__keyboard"></i>
+              <p class="fill__legend">Rellena</p>
+              <i class="fieldset__arrow fa-solid fa-chevron-down fill__arrow"></i>
+            </div>
+
+            <div class="fieldset__container fill__container">
+              <label class="form__label" for="name">Nombre completo</label>
+              <input
+                class="form__field js__fillIn__name"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Ej: Sally Jill"
+                maxlength="20"
+                required
+              />
+              <label class="form__label" for="job">Puesto</label>
+              <input
+                class="form__field js__fillIn__job"
+                type="text"
+                id="job"
+                name="job"
+                placeholder="Ej: Front-end unicorn"
+                maxlength="24"
+                required
+              />
+
+              <label class="form__label form__img" for="img"> Imagen de perfil </label>
+
+              <span class="span__row">
+                <label for="file-upload" class="subir js__profile-trigger"
+                  >Añadir imagen</label
+                >
+                <input
+                  class="js__profile-upload-btn"
+                  type="file"
+                  name="image"
+                  id="file-upload"
+                  style="display: none"
+                />
+                <div class="form__box js__profile-preview"></div>
+              </span>
+
+              <label class="form__label js_email" for="email" required>Email</label>
+              <input
+                class="form__field"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Ej: sally-hill@gmail.com"
+              />
+              <label class="form__label" for="telephone" required>Teléfono</label>
+              <input
+                class="form__field js_phone"
+                type="“tel”"
+                id="“telephone"
+                name="phone"
+                placeholder="Ej: 55-555-55"
+              />
+              <label class="form__label" for="text">Linkedin</label>
+              <input
+                class="form__field js_linkedin"
+                type="text"
+                id="linkedin"
+                name="linkedin"
+                placeholder="Ej: linkedin.con/in/sally.hill"
+              />
+              <label class="form__label" for="text">Github</label>
+              <input
+                class="form__field js_github"
+                type="text"
+                id="github"
+                name="github"
+                placeholder="Ej: @sally-hill"
+              />
+            </div>
+          </fieldset>
+
+          <fieldset class="fieldset collapsed js-form-fieldset share__fieldset">
+            <div class="share__title1 js-form-title">
+              <a href="http://"><i class="fa-solid fa-share-nodes share__share"></i></a>
+              <p class="share__legend">Comparte</p>
+              <i class="fieldset__arrow fa-solid fa-chevron-down share__arrow"></i>
+            </div>
+
+            <div class="fieldset__container share__containerposition">
+              <div class="share__container js-share-container">
+                <i class="fa-solid fa-address-card fa-lg container__icon"></i>
+                <button class="container__button">Crear tarjeta</button>
+              </div>
+              <article class="share__article js-share-article hidden">
+                <h2 class="share__title js_message_error">La tarjeta ha sido creada:</h2>
+                <a class="js_URL share__link" href=""></a>
+                <div class="share__twitter">
+                  <i class="fa-brands fa-twitter"></i>
+                  <button class="share__button js_twitterShareBtn" disabled>
+                    Compartir en twitter
+                  </button>
+                </div>
+              </article>
+            </div>
+          </fieldset>
+
+        </form>
+      </section>
+    </section>
+
+    <footer class="footer">
+      <p class="footer__text">
+        Awesome profile-cards ©2022
+      </p>
+      <img class="footer__img" src="./assets/images/favicon-32x32.png" alt="" />
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

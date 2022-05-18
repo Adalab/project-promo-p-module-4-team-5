@@ -1,0 +1,129 @@
+@import '../core/Variables.scss';
+@import '../core/Mixins.scss';
+
+.fill {
+  &__fieldset {
+    padding: 0 20px 0px 20px;
+
+    display: flex;
+    flex-direction: column;
+    border: none;
+
+    @include tablet() {
+      padding: 0 30px 0 40px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    border-top: 1px solid #6b6b6b58;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet() {
+      padding-bottom: 25px;
+    }
+  }
+
+  &__keyboard {
+    color: $darkbrown;
+  }
+
+  &__legend {
+    margin: 10px 10px;
+    text-transform: uppercase;
+    font-family: $font-main;
+    font-size: 18px;
+    font-weight: 600;
+    color: $darkbrown;
+    width: 89%;
+    text-align: left;
+  }
+}
+
+.fill__title:hover {
+  cursor: pointer;
+}
+
+//anidación para JS
+
+// .collapsed {
+
+//   .fill__container {
+//     display: none;
+//   }
+
+// }
+
+.form {
+  &__label {
+    font-family: $font-main;
+    font-size: 14px;
+    color: $darkbrown;
+    line-height: 1.43;
+    margin: 0 0 7px;
+  }
+
+  &__field {
+    margin: 0 0 15px 0;
+    padding: 0 0 0 15px;
+    max-width: 329px;
+    height: 30px;
+    border: solid 1px $darkbrown;
+
+    &--button {
+      margin: 0 0 15px 0;
+    }
+  }
+
+  &__img {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__box {
+    width: 30px;
+    height: 30px;
+    border: solid 1px $darkbrown;
+    margin: 0 0 15px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: $font-main;
+  font-size: 14px;
+  color: $brownish-grey;
+  opacity: 0.7;
+}
+
+.subir {
+  font-family: $font-main;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: normal;
+  color: $lightbrown;
+  text-align: center;
+
+  width: 140px;
+  height: 30px;
+  padding-top: 5px;
+  border-radius: 3px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  background-color: $darkbrown;
+}
+
+.span__row {
+  display: flex;
+  flex-direction: row;
+}

@@ -1,0 +1,27 @@
+@import '../core/Variables.scss';
+@import '../core/Mixins.scss';
+
+.box-preview {
+  @include tablet() {
+    // width: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    background-image: linear-gradient(to bottom, $white-four, $white-two 9%);
+  }
+}
+
+.section-form {
+  background-color: $lightbrown;
+
+  @include tablet() {
+    width: 35vw;
+    max-width: 329px;
+  }
+
+  @include desktop() {
+    // TODO
+    max-width: 350px;
+  }
+}

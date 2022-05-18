@@ -1,0 +1,139 @@
+@import '../core/Variables.scss';
+@import '../core/Mixins.scss';
+
+.share {
+  &__fieldset {
+    padding: 0 20px 20px 20px;
+    border: none;
+
+    @include tablet() {
+      padding: 0 30px 20px 40px;
+    }
+  }
+
+  &__title1 {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #6b6b6b58;
+    border-bottom: 1px solid #6b6b6b58;
+  }
+  &__share {
+    color: $darkbrown;
+  }
+
+  &__legend {
+    margin: 10px 10px;
+    text-transform: uppercase;
+    font-family: $font-main;
+    font-size: 18px;
+    font-weight: 600;
+    color: $darkbrown;
+    width: 89%;
+    text-align: left;
+  }
+  &__containerposition {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+  &__container {
+    width: 199px;
+    height: 50px;
+    margin: 20px 0 30px 0;
+    padding: 0 15px 0 15px;
+    border-radius: 12px;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+    background-color: $darkbrown;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+.share__button {
+  background-color: $darkbrown;
+  border: none;
+  color: $lightbrown;
+  font-family: $font-main;
+}
+
+.share__title1:hover,
+.share__container:hover,
+.container__button:hover {
+  cursor: pointer;
+}
+// estilos cuando se haya clicado
+// background-color: $white;
+
+.container {
+  &__icon {
+    color: $lightbrown;
+  }
+  &__button {
+    background: none;
+    color: $lightbrown;
+    text-transform: uppercase;
+    font-family: $font-main;
+    border: none;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+///
+
+.share__article {
+  font-family: $font-main;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #6b6b6b58;
+  border-top: 1px solid #6b6b6b58;
+}
+.share__title {
+  font-size: 18px;
+  color: $darkbrown;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.share__link {
+  font-size: 11px;
+  color: $darkbrown;
+  margin-bottom: 10px;
+  text-decoration: none;
+  text-align: center;
+  text-decoration: none;
+}
+.share__twitter {
+  font-size: 14px;
+  width: 181px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 3px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  background-color: $darkbrown;
+  text-align: center;
+  color: $white-two;
+  text-decoration: none;
+  font-family: $font-main;
+}
+.fa-twitter {
+  color: $lightbrown;
+}
+
+.white {
+  background-color: $darkbrown;
+  opacity: 70%;
+}
+.hidden {
+  // ESTO DE ABAJO PARA OCULTARLO
+  display: none;
+}

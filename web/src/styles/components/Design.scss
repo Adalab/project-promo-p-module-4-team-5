@@ -1,0 +1,191 @@
+@import '../core/Variables.scss';
+@import '../core/Mixins.scss';
+
+.fieldset-colours {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: $font-main;
+  padding: 0 20px 0px 20px;
+
+  border: none;
+
+  @include tablet() {
+    padding: 0 30px 0 40px;
+  }
+}
+
+.design {
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 10px;
+  align-items: center;
+  padding-bottom: 10px;
+
+  &__box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__box--window {
+    margin-right: 10px;
+    color: $darkbrown;
+  }
+
+  &__box--title {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: $font-main;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    color: $darkbrown;
+  }
+}
+
+.design:hover {
+  cursor: pointer;
+}
+
+/*
+  .container-design {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-top: 1px solid $brownish-grey;
+    padding-top: 10px;
+    align-items: center;
+    padding-bottom: 10px;
+  
+    @include tablet() {
+      max-width: 329px;
+    }
+  }
+  
+  .window-title {
+    display: flex;
+    align-items: center;
+  }
+  
+  .window {
+    margin-right: 10px;
+    color: $dull-orange;
+  }
+  
+  .design-title {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Open Sans';
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    color: $gunmetal;
+  }
+  */
+
+.colour-section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  @include tablet() {
+    max-width: 329px;
+  }
+}
+.colours-title {
+  width: 62px;
+  height: 19px;
+  color: $gunmetal;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: $font-main;
+  font-weight: normal;
+}
+
+.palette-section {
+  display: flex;
+  gap: 5px;
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.input__label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+.inputs {
+  width: 15px;
+  height: 15px;
+}
+
+.colours-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.list-1,
+.list-2,
+.list-3 {
+  display: flex;
+  list-style: none;
+}
+
+.colour-1a,
+.colour-1b,
+.colour-1c,
+.colour-2a,
+.colour-2b,
+.colour-2c,
+.colour-3a,
+.colour-3b,
+.colour-3c {
+  width: 30px;
+  height: 25px;
+}
+.colour-1a {
+  background: $dark-green-blue;
+}
+
+.colour-1b {
+  background: $dirty-blue;
+}
+
+.colour-1c {
+  background: $hospital-green;
+}
+
+.colour-2a {
+  background: $dried-blood;
+}
+
+.colour-2b {
+  background: $rusty-red;
+}
+
+.colour-2c {
+  background: $tomato;
+}
+
+.colour-3a {
+  background: $slate;
+}
+
+.colour-3b {
+  background: $faded-orange;
+}
+
+.colour-3c {
+  background: $light-grey-blue;
+}

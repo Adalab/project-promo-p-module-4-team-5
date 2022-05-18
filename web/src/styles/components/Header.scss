@@ -1,0 +1,20 @@
+@import '../core/Variables.scss';
+@import '../core/Mixins.scss';
+
+.header {
+  background-image: url('../../images/fondo.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include tablet() {
+    justify-content: left;
+  }
+  &__img {
+    width: 300px;
+    margin: 31px 0 30px;
+    @include tablet() {
+      margin-left: 40px;
+    }
+  }
+}

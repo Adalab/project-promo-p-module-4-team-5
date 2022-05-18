@@ -1,0 +1,111 @@
+@import '../core/Variables.scss';
+@import '../core/Mixins.scss';
+
+.main {
+  background-image: url('../../images/fondo.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 94vh;
+  gap: 60px;
+
+  &__img {
+    width: 100vw;
+
+    @include tablet() {
+      width: 419px;
+      height: 105px;
+    }
+  }
+
+  &__button {
+    width: 129px;
+    height: 42px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 21px;
+    background-color: $darkbrown;
+    color: $sand;
+    font-family: $font-main;
+    text-decoration: none;
+
+    @include tablet() {
+      margin-bottom: 59px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 1.5px 1.5px 1.5px rgb(134, 130, 130);
+    }
+  }
+}
+
+.hero {
+  text-align: center;
+
+  &__title {
+    color: $darkbrown;
+    font-family: $font-second;
+    font-weight: 900;
+  }
+
+  &__text {
+    color: $darkbrown;
+    width: 264.8px;
+    height: 38.4px;
+
+    @include tablet() {
+      width: 331px;
+      height: 48px;
+    }
+  }
+}
+
+.nav {
+  &__container {
+    width: 268px;
+    height: 73.8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    text-align: center;
+    border-radius: 4px;
+    border: solid 1.6px $darkbrown;
+
+    @include tablet() {
+      width: 325px;
+      height: 86px;
+      gap: 30px;
+    }
+  }
+
+  &__title {
+    font-size: 12.8px;
+    font-family: $font-main;
+    font-weight: 100;
+    color: $darkbrown;
+    text-align: center;
+
+    @include tablet() {
+      font-size: 16px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__link {
+    color: $darkbrown;
+    width: 25px;
+    height: 26px;
+  }
+}

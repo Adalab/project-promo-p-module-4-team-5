@@ -26,9 +26,8 @@ server.listen(serverPort, () => {
 });
 
 //Configurar el servidor de estáticos
-
-// const staticServerPath = './src/public-react';
-// server.use(express.static(staticServerPath));
+const staticServerPath = "./src/public-react";
+server.use(express.static(staticServerPath));
 
 //Guardar temporalmente el listado de tarjetas
 const savedCards = [];

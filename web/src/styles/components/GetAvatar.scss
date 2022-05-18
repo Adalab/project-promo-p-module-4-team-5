@@ -1,0 +1,63 @@
+@import '../core/Variables.scss';
+@import '../core/Mixins.scss';
+
+// .span__row {
+//   display: flex;
+//   flex-direction: row;
+// }
+
+// .subir {
+//   font-family: $font-main;
+//   font-size: 14px;
+//   line-height: 1.43;
+//   letter-spacing: normal;
+//   color: $lightbrown;
+//   text-align: center;
+
+//   width: 140px;
+//   height: 30px;
+//   padding-top: 5px;
+//   border-radius: 3px;
+//   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+//   background-color: $darkbrown;
+// }
+
+.get-avatar {
+  display: flex;
+  flex-direction: row;
+}
+
+.get-avatar__label {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 140px;
+  height: 30px;
+  background-color: $darkbrown;
+  border-radius: 3px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  font-family: $font-main;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 5px;
+  line-height: 1.43;
+  letter-spacing: normal;
+  color: $lightbrown;
+}
+
+.get-avatar__upload-field {
+  display: none;
+}
+
+.get-avatar__preview {
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid $darkbrown;
+  height: 30px;
+  margin: 0 0 15px 20px;
+  width: 30px;
+}
