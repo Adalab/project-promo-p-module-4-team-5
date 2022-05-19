@@ -3,6 +3,8 @@
 // Importamos los tres módulos de NPM necesarios para trabajar
 const express = require("express");
 const cors = require("cors");
+// importar el módulo better-sqlite3
+const Database = require("better-sqlite3");
 const { v4: uuidv4 } = require("uuid");
 
 // Creamos el servidor
@@ -25,12 +27,20 @@ server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
 
+// indicar qué base de datos vamos a usar con la ruta relativa a la raíz del proyecto
+const db = new Database("./src/db/cards.db", {
+  // con verbose le decimos que muestre en la consola todas las queries que se ejecuten
+  verbose: console.log,
+  // así podemos comprobar qué queries estamos haciendo en todo momento
+});
+
 //Configurar el servidor de estáticos
 const staticServerPath = "./src/public-react";
 server.use(express.static(staticServerPath));
 
-//Guardar temporalmente el listado de tarjetas
-const savedCards = [];
+//Configurar el servidor de estáticos de los estilos
+const staticServerStyles = "./src/public-css";
+server.use(express.static(staticServerStyles));
 
 // Escribimos los endpoints que queramos
 server.post("/card", (req, res) => {
@@ -49,8 +59,26 @@ server.post("/card", (req, res) => {
       ...req.body,
       id: uuidv4(),
     };
-    //Añadir al listado de tarjetas
-    savedCards.push(newCard);
+
+    //Insertar la tarjeta en la bd
+
+    const query = db.prepare(
+      "INSERT INTO card(palette,name,job,email,phone,linkedin,github,photo,uuid) VALUES (?,?,?,?,?,?,?,?,?)"
+    );
+
+    const result = query.run(
+      newCard.palette,
+      newCard.name,
+      newCard.job,
+      newCard.email,
+      newCard.phone,
+      newCard.linkedin,
+      newCard.github,
+      newCard.photo,
+      newCard.uuid
+    );
+
+    console.log(result);
 
     //Creo la respuesta
     const responseSuccess = {
@@ -68,6 +96,11 @@ server.post("/card", (req, res) => {
   }
 });
 
-server.get("/card/id", (req, res) => {
-  res.json("Tarjeta creada correctamente");
+server.get("/card/:id", (req, res) => {
+  const query = db.prepare("SELECT * FROM card WHERE uuuid=?");
+  const userCard = query.get(req.params.id);
+
+  // res.json("Tarjeta creada correctamente");
+
+  res.render("card", userCard);
 });

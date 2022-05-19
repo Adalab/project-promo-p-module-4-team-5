@@ -8,12 +8,12 @@
     "dev": "nodemon src/index.js",
     "publish-react": "cd web && npm run build && cd .. && rm -rf ./src/public-react && mv ./web/build ./src/public-react"
   },
-  
   "author": "team 5",
   "license": "ISC",
-  
   "dependencies": {
+    "better-sqlite3": "^7.5.3",
     "cors": "^2.8.5",
+    "ejs": "^3.1.8",
     "express": "^4.18.1",
     "uuid": "^8.3.2",
     "uuidv4": "^6.2.13"

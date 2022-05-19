@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Almendra"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
+      integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/main.css" />
+    <title>Tarjeta creada</title>
+  </head>
+  <body>
+    <section class="preview-section">
+      <div class="preview-box">
+        <!-- <section class="preview-box__container"></section> -->
+        <section class="preview-box__containerphoto">
+          <section class="containercard palette<%= palette %>">
+            <article class="containercard__box">
+              <div class="rectangle outline"></div>
+              <div class="container-tex">
+                <h2 class="container-tex__title name"><%= name %></h2>
+                <p class="container-tex__paragraph"><%= job %></p>
+              </div>
+            </article>
+            <div class="profile">
+              <div
+                class="profile__avatar"
+                style="background-image: url('<%= photo %>')"
+              ></div>
+            </div>
+            <ul class="preview-list">
+              <li class="preview-list__item icon">
+                <a class="preview-list__item--link" href="tel:<%= phone %>">
+                  <i class="fa-solid fa-mobile-screen-button link"></i>
+                </a>
+              </li>
+              <li class="preview-list__item icon">
+                <a class="preview-list__item--link" href="mailto:<%= email %>">
+                  <i class="fa-regular fa-envelope link"></i>
+                </a>
+              </li>
+              <li class="preview-list__item icon">
+                <a
+                  class="preview-list__item--link"
+                  target="blank"
+                  href="<%= linkedin %>"
+                >
+                  <i class="fa-brands fa-linkedin-in link"></i>
+                </a>
+              </li>
+              <li class="preview-list__item icon">
+                <a
+                  class="preview-list__item--link"
+                  target="blank"
+                  href="<%= github %>"
+                >
+                  <i class="fa-brands fa-github-alt link"></i>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </div>
+    </section>
+  </body>
+</html>
