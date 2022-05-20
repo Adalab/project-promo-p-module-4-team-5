@@ -1,4 +1,4 @@
-const URL_SERVER = 'https://awesome-profile-cards.herokuapp.com/card';
+const URL_SERVER = 'https://awesome-cards-teamfive.herokuapp.com/card';
 // const URL_LOCAL = 'http://localhost:4000/card';
 
 const dataApi = (data) => {

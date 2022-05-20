@@ -83,7 +83,7 @@ server.post('/card', (req, res) => {
     //Creo la respuesta
     const responseSuccess = {
       success: true,
-      cardURL: `https://localhost:4000/card/${newCard.id}`,
+      cardURL: `https://awesome-cards-teamfive.herokuapp.com/card/${newCard.id}`,
     };
     //Envio de respuesta
     res.json(responseSuccess);
