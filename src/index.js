@@ -57,7 +57,7 @@ server.post('/card', (req, res) => {
     //Crear la tarjeta que es un objeto
     const newCard = {
       ...req.body,
-      id: uuidv4(),
+      uuid: uuidv4(),
     };
 
     //Insertar la tarjeta en la bd
