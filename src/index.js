@@ -83,7 +83,7 @@ server.post('/card', (req, res) => {
     //Creo la respuesta
     const responseSuccess = {
       success: true,
-      cardURL: `https://awesome-cards-teamfive.herokuapp.com/card/${newCard.id}`,
+      cardURL: `https://awesome-cards-teamfive.herokuapp.com/card/${newCard.uuid}`,
     };
     //Envio de respuesta
     res.json(responseSuccess);
@@ -97,7 +97,7 @@ server.post('/card', (req, res) => {
 });
 
 server.get('/card/:id', (req, res) => {
-  const query = db.prepare('SELECT * FROM card WHERE uuuid=?');
+  const query = db.prepare('SELECT * FROM card WHERE uuid=?');
   const userCard = query.get(req.params.id);
 
   // res.json("Tarjeta creada correctamente");
