@@ -18,7 +18,6 @@ server.use(
 );
 
 // Configuramos el servidor
-
 server.set('view engine', 'ejs');
 
 // Arrancamos el servidor en el puerto 4000
@@ -27,18 +26,18 @@ server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
 
-// indicar qué base de datos vamos a usar con la ruta relativa a la raíz del proyecto
+// Indicar qué base de datos vamos a usar con la ruta relativa a la raíz del proyecto
 const db = new Database('./src/db/cards.db', {
-  // con verbose le decimos que muestre en la consola todas las queries que se ejecuten
+  // Con verbose le decimos que muestre en la consola todas las queries que se ejecuten
   verbose: console.log,
-  // así podemos comprobar qué queries estamos haciendo en todo momento
+  // Así podemos comprobar qué queries estamos haciendo en todo momento
 });
 
-//Configurar el servidor de estáticos
+// Configurar el servidor de estáticos
 const staticServerPath = './src/public-react';
 server.use(express.static(staticServerPath));
 
-//Configurar el servidor de estáticos de los estilos
+// Configurar el servidor de estáticos de los estilos
 const staticServerStyles = './src/public-css';
 server.use(express.static(staticServerStyles));
 
@@ -54,14 +53,13 @@ server.post('/card', (req, res) => {
     req.body.github !== '' &&
     req.body.photo !== ''
   ) {
-    //Crear la tarjeta que es un objeto
+    // Crear la tarjeta que es un objeto
     const newCard = {
       ...req.body,
       uuid: uuidv4(),
     };
 
-    //Insertar la tarjeta en la bd
-
+    // Insertar la tarjeta en la bd
     const query = db.prepare(
       'INSERT INTO card(palette,name,job,email,phone,linkedin,github,photo,uuid) VALUES (?,?,?,?,?,?,?,?,?)'
     );
@@ -80,12 +78,12 @@ server.post('/card', (req, res) => {
 
     console.log(result);
 
-    //Creo la respuesta
+    // Creo la respuesta
     const responseSuccess = {
       success: true,
       cardURL: `https://awesome-cards-teamfive.herokuapp.com/card/${newCard.uuid}`,
     };
-    //Envio de respuesta
+    // Envio de respuesta
     res.json(responseSuccess);
   } else {
     const responseError = {
