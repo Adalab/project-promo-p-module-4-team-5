@@ -18,8 +18,8 @@ server.use(
 );
 
 // Configuramos el servidor
-server.use(cors());
-server.use(express.json());
+
+server.set('view engine', 'ejs');
 
 // Arrancamos el servidor en el puerto 4000
 const serverPort = process.env.PORT || 4000;
