@@ -37,7 +37,7 @@ function Share(props) {
               Crear tarjeta
             </button>
           </div>
-          <article className="share__article  ">
+          <article className={`share__article ${props.share}`}>
             <h2 className="share__title ">La tarjeta ha sido creada:</h2>
             <a
               className=" share__link"

@@ -47,6 +47,7 @@ function Create(props) {
               apiData={props.apiData}
               shareOpen={props.shareOpen}
               handleToggleForms={props.handleToggleForms}
+              share={props.share}
             />
           </form>
         </section>

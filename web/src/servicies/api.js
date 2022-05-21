@@ -1,5 +1,5 @@
 const URL_SERVER = 'https://awesome-cards-teamfive.herokuapp.com/card';
-// const URL_LOCAL = 'http://localhost:4000/card';
+//const URL_LOCAL = 'http://localhost:4000/card';
 
 const dataApi = (data) => {
   return fetch(URL_SERVER, {

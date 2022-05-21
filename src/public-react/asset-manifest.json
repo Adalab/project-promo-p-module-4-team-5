@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "./static/css/main.5333486a.css",
-    "main.js": "./static/js/main.0f9d0a05.js",
+    "main.js": "./static/js/main.559d102c.js",
     "static/media/fondo.jpg": "./static/media/fondo.d59aa793cdc5a2206022.jpg",
     "static/media/boolean_logo.png": "./static/media/boolean_logo.5339d698b161a481f118.png",
     "static/media/imagen-chica.png": "./static/media/imagen-chica.3f5acdb1e5e096718944.png",
     "static/media/favicon-32x32.png": "./static/media/favicon-32x32.630ce2208029d11888ae.png",
     "index.html": "./index.html",
     "main.5333486a.css.map": "./static/css/main.5333486a.css.map",
-    "main.0f9d0a05.js.map": "./static/js/main.0f9d0a05.js.map"
+    "main.559d102c.js.map": "./static/js/main.559d102c.js.map"
   },
   "entrypoints": [
     "static/css/main.5333486a.css",
-    "static/js/main.0f9d0a05.js"
+    "static/js/main.559d102c.js"
   ]
 }
