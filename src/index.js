@@ -23,7 +23,9 @@ server.set('view engine', 'ejs');
 // Arrancamos el servidor en el puerto 4000
 const serverPort = process.env.PORT || 4000;
 server.listen(serverPort, () => {
-  console.log(`Server listening at http://localhost:${serverPort}`);
+  console.log(
+    `Server listening at https://awesome-cards-teamfive.herokuapp.com/card/:${serverPort}`
+  );
 });
 
 // Indicar qué base de datos vamos a usar con la ruta relativa a la raíz del proyecto
@@ -60,11 +62,11 @@ server.post('/card', (req, res) => {
     req.body.photo !== ''
   ) {
     // Insertar la tarjeta en la bd
-    const query = db.prepare(
+    const insertCard = db.prepare(
       'INSERT INTO card(palette,name,job,email,phone,linkedin,github,photo,uuid) VALUES (?,?,?,?,?,?,?,?,?)'
     );
 
-    const result = query.run(
+    insertCard.run(
       newCard.palette,
       newCard.name,
       newCard.job,
@@ -76,7 +78,7 @@ server.post('/card', (req, res) => {
       newCard.uuid
     );
 
-    console.log(result);
+    console.log(insertCard);
 
     // Creo la respuesta
     const responseSuccess = {
@@ -92,6 +94,15 @@ server.post('/card', (req, res) => {
     };
     res.json(responseError);
   }
+});
+
+server.get('/card/:id', (req, res) => {
+  const query = db.prepare('SELECT * FROM card WHERE uuid=?');
+  const userCard = query.get(req.params.id);
+
+  // res.json("Tarjeta creada correctamente");
+
+  res.render('card', userCard);
 });
 
 server.get('/card/:id', (req, res) => {
