@@ -43,6 +43,12 @@ server.use(express.static(staticServerStyles));
 
 // Escribimos los endpoints que queramos
 server.post('/card', (req, res) => {
+  // Crear la tarjeta que es un objeto
+  const newCard = {
+    ...req.body,
+    uuid: uuidv4(),
+  };
+
   if (
     req.body.palette !== '' &&
     req.body.name !== '' &&
@@ -53,12 +59,6 @@ server.post('/card', (req, res) => {
     req.body.github !== '' &&
     req.body.photo !== ''
   ) {
-    // Crear la tarjeta que es un objeto
-    const newCard = {
-      ...req.body,
-      uuid: uuidv4(),
-    };
-
     // Insertar la tarjeta en la bd
     const query = db.prepare(
       'INSERT INTO card(palette,name,job,email,phone,linkedin,github,photo,uuid) VALUES (?,?,?,?,?,?,?,?,?)'
