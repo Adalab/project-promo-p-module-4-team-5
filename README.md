@@ -31,7 +31,7 @@ Puedes ver el resultado final haciendo clic <a href="https://awesome-cards-teamf
 
 [![Autor](https://img.shields.io/badge/-Alicia%20Gonz%C3%A1lez%20San%20Juan-brightgreen?style=for-the-badge&logo=github)](https://github.com/Aliciagsj)
 
-[![Autor](https://img.shields.io/badge/-Clara%20Miranda%20Zapata-blueviolet?style=for-the-badge&logo=github)](https://github.com/miranda-zapata)
+[![Autor](https://img.shields.io/badge/-Clara%20Miranda%20Zapata-blueviolet?style=for-the-badge&logo=github)](https://github.com/claraMirandaZ)
 
 [![Autor](https://img.shields.io/badge/-Joanna%20Busmail%20Casanova-orange?style=for-the-badge&logo=github)](https://github.com/JoannaBusmail)
 
